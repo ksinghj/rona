@@ -1,1 +1,2 @@
 export const GET_GLOBAL_DATA = "GET_GLOBAL_DATA";
+export const GET_COUNTRY_DATA = "GET_COUNTRY_DATA";
