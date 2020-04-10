@@ -1,11 +1,25 @@
 import React from "react";
+import { countryList } from "../api/countries";
 
 class SelectCountry extends React.Component {
   renderCountry = (selectCountry) => {
+    const countries = countryList.map((country) => {
+      console.log(country);
+      return <option key={country}>{country}</option>;
+    });
     if (selectCountry) {
-      return <div>SelectCountry</div>;
+      // return <div>{countrySelected}:{countryStatistics}</div>; // TODO: <
+      return null;
     }
-    return <div>Select a country to view national statistics</div>;
+    return (
+      <div>
+        <p>Select a country to view national statistics:</p>
+        <select id="country-select">
+          <option>Select a country here</option>
+          {countries}
+        </select>
+      </div>
+    );
   };
 
   render() {
