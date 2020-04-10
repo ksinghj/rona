@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin: 2em;
+  text-align: center;
+}
+.fonted {
+  font-family: "Quicksand", sans-serif;
+}
+.header {
+  font-weight: 100;
+}
+.covid-header {
+  font-size: 32px;
+}
+.global-figs-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
