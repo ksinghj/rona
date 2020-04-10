@@ -1,15 +1,14 @@
 import React from "react";
-import { getData } from "../actions";
-import { connect } from "react-redux";
-
+import Global from "./Global";
 class App extends React.Component {
-  componentDidMount() {
-    this.props.getData();
-  }
-
   render() {
-    return <div>App</div>;
+    return (
+      <div>
+        COVID-19 Real time statistics
+        <Global />
+      </div>
+    );
   }
 }
 
-export default connect(null, { getData })(App);
+export default App;
