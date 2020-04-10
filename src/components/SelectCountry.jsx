@@ -1,54 +1,48 @@
 import React from "react";
 import { connect } from "react-redux";
+import CountryData from "./CountryData";
 import { countryList } from "../api/countries";
 import { getCountryData } from "../actions";
 
 class SelectCountry extends React.Component {
-  state = { value: "" };
+  state = { value: null };
 
-  componentDidMount() {
-    this.props.getCountryData("japan");
-  }
-
-  renderCountry = selectCountry => {
-    // TODO: remove selectCountry to state cc
+  renderCountry = () => {
     const countries = countryList.map(country => {
-      return <option key={country}>{country}</option>;
-    });
-
-    if (selectCountry) {
       return (
-        <div>
-          <h2>Country Figures:</h2>
-          <div className="global-figs-flex">
-            <div>Confirmed: {this.props.countryData.confirmed}</div>
-            <div>Recovered: {this.props.countryData.recovered}</div>
-            <div>Deaths: {this.props.countryData.deaths}</div>
-          </div>
-        </div>
+        <option value={country} key={country}>
+          {country}
+        </option>
       );
-    }
+    });
 
     return (
       <div>
         <p>Select a country to view national statistics:</p>
-        <select value={this.state.value} id="country-select">
-          <option defaultValue>Select a country here</option>
+        <select onChange={this.handleCountrySelect} id="country-select">
+          <option>Select a country here</option>
           {countries}
         </select>
       </div>
     );
   };
 
+  handleCountrySelect = e => {
+    this.setState({ value: e.target.value }, this.handleSubmit);
+  };
+
+  handleSubmit = () => {
+    this.props.getCountryData(this.state.value);
+  };
+
   render() {
-    return <div>{this.renderCountry()}</div>;
+    return (
+      <div>
+        {this.renderCountry()}
+        <CountryData country={this.state.value} />
+      </div>
+    );
   }
 }
 
-const mapStateToProps = state => {
-  return { state: state.countryData };
-};
-
-export default connect(mapStateToProps, { getCountryData })(SelectCountry);
-
-// TODO: Add select input and logic to determine wether country has been selected or not
+export default connect(null, { getCountryData })(SelectCountry);

@@ -6,10 +6,11 @@ import { GET_COUNTRY_DATA } from "../types";
 export const globalData = (state = {}, action) => {
   switch (action.type) {
     case GET_GLOBAL_DATA:
+      const { confirmed, recovered, deaths } = action.payload;
       return {
-        confirmed: action.payload.confirmed.value,
-        recovered: action.payload.recovered.value,
-        deaths: action.payload.deaths.value,
+        confirmed: confirmed.value,
+        recovered: recovered.value,
+        deaths: deaths.value,
       };
     default:
       return state;
@@ -19,10 +20,11 @@ export const globalData = (state = {}, action) => {
 export const countryData = (state = {}, action) => {
   switch (action.type) {
     case GET_COUNTRY_DATA:
+      const { confirmed, recovered, deaths } = action.payload;
       return {
-        confirmed: action.payload.confirmed.value,
-        recovered: action.payload.recovered.value,
-        deaths: action.payload.deaths.value,
+        confirmed: confirmed.value,
+        recovered: recovered.value,
+        deaths: deaths.value,
       };
     default:
       return state;
