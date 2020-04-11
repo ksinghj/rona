@@ -2,20 +2,74 @@
   box-sizing: border-box;
 }
 .container {
-  margin: 2em;
+  margin: 2em 0;
   text-align: center;
 }
 .fonted {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
+
+/* HELPERS */
+.text-white {
+  color: white;
+}
+.text-blue {
+  color: rgb(0, 119, 255);
+}
+.text-red {
+  color: red;
+}
+.text-green {
+  color: rgb(0, 194, 0);
+}
+.text-bold {
+  font-weight: 900;
+}
+
+/* HEADERS */
 .header {
   font-weight: 100;
 }
 .covid-header {
   font-size: 32px;
 }
+
+/* GLOBAL FIGURES */
 .global-figs-flex {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.global-figs__component {
+  width: 100%;
+  /* background: rgb(226, 226, 226); */
+}
+/* You could use :after - it doesn't really matter */
+.global-figs__background {
+  padding: 2em 0 3em 0;
+  width: 100%;
+  z-index: 0;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/66/World_Map_Grayscale.png");
+  background-position: center;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.global-figs__component {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* COUNTRY SELECT */
+.select-country__component {
+  padding: 2em;
+}
+.select-country__choose {
+  padding: 1em;
+}
+.select-country__select-box {
+  padding: 0.3em;
 }

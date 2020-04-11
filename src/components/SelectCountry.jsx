@@ -19,7 +19,10 @@ class SelectCountry extends React.Component {
     return (
       <div>
         <p>Select a country to view national statistics:</p>
-        <select onChange={this.handleCountrySelect} id="country-select">
+        <select
+          className="select-country__select-box text-blue"
+          onChange={this.handleCountrySelect}
+          id="country-select">
           <option>Select a country here</option>
           {countries}
         </select>
@@ -37,7 +40,7 @@ class SelectCountry extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="select-country__component">
         {this.renderCountry()}
         <CountryData country={this.state.value} />
       </div>

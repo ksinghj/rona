@@ -6,15 +6,19 @@ class CountryData extends React.Component {
   render() {
     const { confirmed, recovered, deaths } = this.props.countryData;
     if (!this.props.country) {
-      return <div>Select a country</div>;
+      return <div className="select-country__choose">Select a country</div>;
     }
+    // TODO: Add confirmed, recovered, deaths as a component takes figs as props - with card-like styles
+    // TODO: set country figures </h2> to: ${countryName} figures
     return (
       <div>
-        <h2>Country Figures:</h2>
+        <h2>
+          <span className="text-blue">Country</span> Figures:
+        </h2>
         <div className="global-figs-flex">
           <div>Confirmed: {confirmed}</div>
-          <div>Recovered: {recovered}</div>
-          <div>Deaths: {deaths}</div>
+          <div className="text-green">Recovered: {recovered}</div>
+          <div className="text-red">Deaths: {deaths}</div>
         </div>
       </div>
     );

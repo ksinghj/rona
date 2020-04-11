@@ -9,12 +9,18 @@ class Global extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Global Figures:</h2>
-        <div className="global-figs-flex">
-          <div>Confirmed: {this.props.globalData.confirmed}</div>
-          <div>Recovered: {this.props.globalData.recovered}</div>
-          <div>Deaths: {this.props.globalData.deaths}</div>
+      <div className="global-figs__component">
+        <div className="global-figs__background text-bold">
+          <h2>Global Figures:</h2>
+          <div className="global-figs-flex">
+            <div>Confirmed: {this.props.globalData.confirmed}</div>
+            <div className="text-green">
+              Recovered: {this.props.globalData.recovered}
+            </div>
+            <div className="text-red">
+              Deaths: {this.props.globalData.deaths}
+            </div>
+          </div>
         </div>
       </div>
     );
