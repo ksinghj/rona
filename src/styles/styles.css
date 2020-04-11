@@ -42,11 +42,10 @@
 }
 .global-figs__component {
   width: 100%;
-  /* background: rgb(226, 226, 226); */
 }
-/* You could use :after - it doesn't really matter */
 .global-figs__background {
-  padding: 2em 0 3em 0;
+  /* "You could use :after - it doesn't really matter" (copy&pasted code) */
+  padding: 2em 0 4em 0;
   width: 100%;
   z-index: 0;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/66/World_Map_Grayscale.png");

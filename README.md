@@ -1,2 +1,3 @@
 # COVID-19 Statistics React App
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Screenshot of app")
+
+![alt text](https://github.com/KJabandaa10/rona/img/github-screenshot "Screenshot of app")
