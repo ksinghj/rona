@@ -1,25 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getCountryData } from "../actions";
+import Figures from "./Figures";
 
 class CountryData extends React.Component {
   render() {
     const { confirmed, recovered, deaths } = this.props.countryData;
-    if (!this.props.country) {
+    const { country } = this.props;
+    if (!country) {
       return <div className="select-country__choose">Select a country</div>;
     }
-    // TODO: Add confirmed, recovered, deaths as a component takes figs as props - with card-like styles
-    // TODO: set country figures </h2> to: ${countryName} figures
     return (
       <div>
         <h2>
-          <span className="text-blue">Country</span> Figures:
+          <span className="text-blue">{country}</span> Figures:
         </h2>
-        <div className="global-figs-flex">
-          <div>Confirmed: {confirmed}</div>
-          <div className="text-green">Recovered: {recovered}</div>
-          <div className="text-red">Deaths: {deaths}</div>
-        </div>
+        <Figures confirmed={confirmed} recovered={recovered} deaths={deaths} />
       </div>
     );
   }

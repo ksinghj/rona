@@ -35,11 +35,6 @@
 }
 
 /* GLOBAL FIGURES */
-.global-figs-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
 .global-figs__component {
   width: 100%;
 }
@@ -71,4 +66,25 @@
 }
 .select-country__select-box {
   padding: 0.3em;
+  border: 2px solid rgb(195, 195, 195);
+}
+.select-country__select-box:focus {
+  outline: none;
+}
+
+/* FIGURES */
+.figures__component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.figures__card {
+  background: rgb(197, 197, 197);
+  padding: 0.5em;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    margin: 0 10vw;
+  }
 }

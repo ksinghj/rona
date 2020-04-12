@@ -31,10 +31,10 @@ class SelectCountry extends React.Component {
   };
 
   handleCountrySelect = e => {
-    this.setState({ value: e.target.value }, this.handleSubmit);
+    this.setState({ value: e.target.value }, this.handleCountrySelectSubmit);
   };
 
-  handleSubmit = () => {
+  handleCountrySelectSubmit = () => {
     this.props.getCountryData(this.state.value);
   };
 
