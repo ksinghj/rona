@@ -88,3 +88,9 @@
     margin: 0 10vw;
   }
 }
+
+@media (min-width: 1500px) {
+  .container {
+    margin: 2em 20vw;
+  }
+}

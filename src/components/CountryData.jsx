@@ -26,3 +26,6 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, { getCountryData })(CountryData);
+
+// TODO: make span text go to select a country when clicked
+// or disable select option after click
