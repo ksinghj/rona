@@ -20,6 +20,10 @@ class App extends React.Component {
           the ongoing 2019–20 coronavirus pandemic.
         </div>
         <Global />
+        <div className="info text-align-left">
+          Above is the number of cases worldwide, for national cases select a
+          country from the dropdown below.
+        </div>
         <SelectCountry />
       </div>
     );

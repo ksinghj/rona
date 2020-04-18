@@ -12,9 +12,9 @@ class CountryData extends React.Component {
     }
     return (
       <div>
-        <h2>
-          <span className="text-blue">{country}</span> Figures:
-        </h2>
+        <h4>
+          <span className="text-blue">{country}</span> cases:
+        </h4>
         <Figures confirmed={confirmed} recovered={recovered} deaths={deaths} />
       </div>
     );

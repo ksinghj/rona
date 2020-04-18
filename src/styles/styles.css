@@ -66,16 +66,24 @@
   padding: 0.5em;
 }
 
+/* GLOBAL (component) */
+.global_component {
+  margin: 2em 0;
+}
+
 /* COUNTRY SELECT */
 .select-country__component {
-  padding: 2em;
+  margin: 2em;
 }
 .select-country__choose {
   padding: 1em;
 }
 .select-country__select-box {
-  padding: 0.3em;
-  border: 2px solid rgb(195, 195, 195);
+  padding: 1em;
+  font-size: 12px;
+  border: 1px solid rgb(58, 58, 58);
+  width: 80%;
+  border-radius: none;
 }
 .select-country__select-box:focus {
   outline: none;

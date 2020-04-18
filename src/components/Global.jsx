@@ -10,7 +10,7 @@ class Global extends React.Component {
   render() {
     const { globalData } = this.props;
     return (
-      <div className="text-bold">
+      <div className="global_component text-bold">
         <h2>Global cases</h2>
         <Figures
           confirmed={globalData.confirmed}

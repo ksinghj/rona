@@ -20,10 +20,10 @@ class SelectCountry extends React.Component {
       <div>
         <p>Select a country to view national statistics:</p>
         <select
-          className="select-country__select-box text-blue"
+          className="select-country__select-box"
           onChange={this.handleCountrySelect}
           id="country-select">
-          <option>Select a country here</option>
+          <option className="text-font__wide">Select a country</option>
           {countries}
         </select>
       </div>
