@@ -6,7 +6,7 @@
   text-align: center;
 }
 .fonted {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* HELPERS */
@@ -25,13 +25,27 @@
 .text-bold {
   font-weight: 900;
 }
-
+.text-align-left {
+  text-align: left;
+  padding: 1em 2em;
+}
 /* HEADERS */
 .header {
   font-weight: 100;
 }
 .covid-header {
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 300;
+}
+/* NAV */
+.nav {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.nav img {
+  height: auto;
+  width: 50px;
+  margin: auto;
 }
 
 /* GLOBAL FIGURES */
