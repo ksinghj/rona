@@ -43,15 +43,34 @@
   font-size: 24px;
   font-weight: 300;
 }
+@media screen and (min-width: 768px) {
+  .covid-header {
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
 /* NAV */
 .nav {
   display: flex;
   flex-direction: column-reverse;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .nav img {
+  display: block;
   height: auto;
   width: 50px;
   margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .nav img {
+    margin: 0;
+    width: 100px;
+  }
 }
 
 /* FIGURES */
