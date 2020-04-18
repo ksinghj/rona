@@ -48,9 +48,6 @@
     font-size: 20px;
     width: 85%;
   }
-  .hide-lg-up {
-    display: none;
-  }
 }
 
 /* HEADERS */
@@ -98,7 +95,13 @@
   padding: 1em;
   width: 80%;
   margin: auto;
-  /* TODO: change on lg  - auto wont work*/
+}
+@media screen and (min-width: 1400px) {
+  .figures__component {
+    margin: auto;
+    width: 100%;
+    max-width: 37vw;
+  }
 }
 .figures__word {
   padding: 0.5em;
@@ -137,9 +140,12 @@
   .container {
     margin: 2em 20vw;
   }
+  .select-country__select-box {
+    padding: 5em;
+    font-size: 16px;
+  }
 }
 .cases-lg-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  width: 50vw;
+  margin: auto;
 }

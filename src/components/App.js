@@ -27,7 +27,7 @@ class App extends React.Component {
                   coronavirus pandemic.
                 </div>
                 <Global />
-                <div className="text-type__info text-align-left hide-lg-up">
+                <div className="text-type__info text-align-left">
                   Above is the number of cases worldwide, for national cases
                   select a country from the dropdown below.
                 </div>
