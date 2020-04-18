@@ -138,3 +138,8 @@
     margin: 2em 20vw;
   }
 }
+.cases-lg-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
