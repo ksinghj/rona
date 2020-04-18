@@ -29,6 +29,12 @@
   text-align: left;
   padding: 1em 2em;
 }
+.text-font__wide {
+  letter-spacing: 0.24em;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
 /* HEADERS */
 .header {
   font-weight: 100;
@@ -48,27 +54,16 @@
   margin: auto;
 }
 
-/* GLOBAL FIGURES */
-.global-figs__component {
-  width: 100%;
+/* FIGURES */
+.figures__component {
+  border: 1px solid blue;
+  padding: 1em;
+  width: 80%;
+  margin: auto;
+  /* TODO: change on lg  - auto wont work*/
 }
-.global-figs__background {
-  /* "You could use :after - it doesn't really matter" (copy&pasted code) */
-  padding: 2em 0 4em 0;
-  width: 100%;
-  z-index: 0;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/66/World_Map_Grayscale.png");
-  background-position: center;
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-.global-figs__component {
-  opacity: 1;
-  z-index: 1;
+.figures__word {
+  padding: 0.5em;
 }
 
 /* COUNTRY SELECT */
@@ -84,17 +79,6 @@
 }
 .select-country__select-box:focus {
   outline: none;
-}
-
-/* FIGURES */
-.figures__component {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.figures__card {
-  background: rgb(197, 197, 197);
-  padding: 0.5em;
 }
 
 @media screen and (min-width: 900px) {
